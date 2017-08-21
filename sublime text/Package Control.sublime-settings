@@ -5,8 +5,8 @@
 		"ACF Snippets",
 		"All Autocomplete",
 		"AutoFileName",
-		"Babel",
-		"Babel Snippets",
+		"babel-sublime",
+		"babel-sublime-snippets",
 		"BracketHighlighter",
 		"Color Highlighter",
 		"ColorPicker",
@@ -18,7 +18,6 @@
 		"GitGutter",
 		"Goto-CSS-Declaration",
 		"Gulp",
-		"Gutter Color",
 		"HTML-CSS-JS Prettify",
 		"JavaScript Completions",
 		"jQuery",
@@ -37,5 +36,10 @@
 		"Theme - Spacegray",
 		"WordPress Completions",
 		"WordPress Developer Resources"
+	],
+	"repositories":
+	[
+		"https://github.com/babel/babel-sublime",
+		"https://github.com/babel/babel-sublime-snippets"
 	]
 }
