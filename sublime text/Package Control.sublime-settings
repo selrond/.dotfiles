@@ -1,12 +1,4 @@
 {
-	"bootstrapped": true,
-	"channels":
-	[
-		"https://packagecontrol.io/channel_v3.json"
-	],
-	"in_process_packages":
-	[
-	],
 	"installed_packages":
 	[
 		"A File Icon",
@@ -45,14 +37,12 @@
 		"SublimeLinter-contrib-scss-lint",
 		"SublimeLinter-csslint",
 		"SublimeLinter-json",
-		"Theme - Spacegray",
 		"WordPress Completions",
 		"WordPress Developer Resources"
 	],
 	"repositories":
 	[
 		"https://github.com/babel/babel-sublime",
-		"https://github.com/babel/babel-sublime-snippets",
 		"https://github.com/selrond/yars"
 	]
 }
