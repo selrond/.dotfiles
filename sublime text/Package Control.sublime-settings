@@ -1,4 +1,12 @@
 {
+	"bootstrapped": true,
+	"channels":
+	[
+		"https://packagecontrol.io/channel_v3.json"
+	],
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
 		"A File Icon",
@@ -6,12 +14,12 @@
 		"All Autocomplete",
 		"AutoFileName",
 		"babel-sublime",
-		"babel-sublime-snippets",
 		"BracketHighlighter",
 		"Color Highlighter",
 		"ColorPicker",
 		"CSS3",
 		"DocBlockr",
+		"Dotfiles Syntax Highlighting",
 		"EditorConfig",
 		"Emmet",
 		"Expand Selection to Quotes",
@@ -19,8 +27,10 @@
 		"Goto-CSS-Declaration",
 		"Gulp",
 		"HTML-CSS-JS Prettify",
+		"Indent XML",
 		"JavaScript Completions",
 		"jQuery",
+		"JsPrettier",
 		"MarkdownEditing",
 		"Material Theme",
 		"MJML-syntax",
@@ -30,6 +40,8 @@
 		"SCSS",
 		"SideBarEnhancements",
 		"SublimeLinter",
+		"SublimeLinter-annotations",
+		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-contrib-scss-lint",
 		"SublimeLinter-csslint",
 		"SublimeLinter-json",
@@ -40,6 +52,7 @@
 	"repositories":
 	[
 		"https://github.com/babel/babel-sublime",
-		"https://github.com/babel/babel-sublime-snippets"
+		"https://github.com/babel/babel-sublime-snippets",
+		"https://github.com/selrond/yars"
 	]
 }
