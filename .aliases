@@ -1,0 +1,20 @@
+# Updating
+alias brewup="brew update; brew upgrade; brew prune; brew cleanup; brew doctor"
+alias npmup="npm update -g"
+alias allup="brewup; npmup"
+
+# Networking
+alias wifirestart="sudo ifconfig en0 down && sudo ifconfig en0 up"
+alias macview="ifconfig en0 | grep ether"
+alias macrandom="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//' | xargs sudo ifconfig en0 ether && wifirestart"
+# Your MAC Address resets aoutomatically upon restart. You can reset it manually though:
+# alias macreset="sudo ifconfig en0 ether <your-original-mac-address>"
+
+# Web Development related stuff
+alias yi="yarn init -y"
+
+# youtube-dl related stuff
+alias ydv="youtube-dl --format mp4 --prefer-free-formats --ignore-errors --output '%(title)s-%(resolution)s.%(ext)s'"
+alias ydvp="youtube-dl --output '%(playlist_index)s-%(title)s.%(ext)s' --ignore-errors"
+alias yda="youtube-dl -f --output '%(title)s.%(ext)s' -x --audio-format=mp3 --add-metadata --audio-quality 0 --embed-thumbnail"
+alias ydap="youtube-dl --output '%(autonumber)s - %(title)s.%(ext)s' -x --audio-format=mp3 --add-metadata --audio-quality 0 --embed-thumbnail --ignore-errors"
