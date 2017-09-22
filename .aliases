@@ -1,7 +1,7 @@
 # Updating
 alias brewup="brew update; brew upgrade; brew prune; brew cleanup; brew doctor"
 alias npmup="npm update -g"
-alias allup="brewup; npmup"
+alias allup="brewup && echo 'brewup done!' || echo 'brewup failed...'; npmup && echo 'npmup done!' || echo 'npmup failed...'"
 
 # Networking
 alias wifirestart="sudo ifconfig en0 down && sudo ifconfig en0 up"
