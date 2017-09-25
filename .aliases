@@ -14,7 +14,7 @@ alias macrandom="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//' | xargs sudo
 alias yi="yarn init -y"
 
 # youtube-dl related stuff
-alias ydv="youtube-dl --format mp4 --prefer-free-formats --ignore-errors --output '%(title)s-%(resolution)s.%(ext)s'"
-alias ydvp="youtube-dl --output '%(playlist_index)s-%(title)s.%(ext)s' --ignore-errors"
-alias yda="youtube-dl -f --output '%(title)s.%(ext)s' -x --audio-format=mp3 --add-metadata --audio-quality 0 --embed-thumbnail"
-alias ydap="youtube-dl --output '%(autonumber)s - %(title)s.%(ext)s' -x --audio-format=mp3 --add-metadata --audio-quality 0 --embed-thumbnail --ignore-errors"
+alias ydv="youtube-dl --output '%(title)s-%(id)s-%(resolution)s.%(ext)s' --format mp4"
+alias ydvp="youtube-dl --output '%(playlist_index)s-%(title)s-%(id)s-%(resolution)s.%(ext)s' --ignore-errors"
+alias yda="youtube-dl --output '%(title)s-%(id)s-%(abr)dKBpS.%(ext)s' -x --audio-format=mp3 --add-metadata --audio-quality 0 --embed-thumbnail"
+alias ydap="youtube-dl --output '%(autonumber)s - %(title)s-%(id)s-%(abr)dKBpS.%(ext)s' --ignore-errors -x --audio-format=mp3 --add-metadata --audio-quality 0 --embed-thumbnail"
