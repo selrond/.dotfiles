@@ -27,7 +27,7 @@ alias npmcu="npm-check -u"
 alias yi="yarn init -y"
 
 # youtube-dl related stuff
-alias ydv="youtube-dl --output '%(title)s-%(id)s-%(resolution)s.%(ext)s' --format mp4"
-alias ydvp="youtube-dl --output '%(playlist_index)s-%(title)s-%(id)s-%(resolution)s.%(ext)s' --ignore-errors"
+alias ydv="youtube-dl --output '%(title)s-%(id)s-%(resolution)s.%(ext)s' --format bestvideo+bestaudio"
+alias ydvp="youtube-dl --output '%(playlist_index)s-%(title)s-%(id)s-%(resolution)s.%(ext)s' --format bestvideo+bestaudio --ignore-errors"
 alias yda="youtube-dl --output '%(title)s-%(id)s-%(abr)dKBpS.%(ext)s' -x --audio-format=mp3 --add-metadata --audio-quality 0 --embed-thumbnail"
 alias ydap="youtube-dl --output '%(autonumber)s - %(title)s-%(id)s-%(abr)dKBpS.%(ext)s' --ignore-errors -x --audio-format=mp3 --add-metadata --audio-quality 0 --embed-thumbnail"
