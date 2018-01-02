@@ -1,33 +1,48 @@
 # Updating
-alias brewup="brew update; brew upgrade; brew prune; brew cleanup; brew doctor"
-alias npmup="npm update -g"
-alias allup="brewup && echo 'brewup done!' || echo 'brewup failed...'; npmup && echo 'npmup done!' || echo 'npmup failed...'"
 
-# Networking
+## Update brew 
+alias brewup="brew update; brew upgrade; brew prune; brew cleanup; brew doctor"
+## Update global npm packages
+alias npmup="npm update -g"
+alias allup="brewup && echo 'Updating homebrew done!' || echo 'Updating homebrew failed...'; npmup && echo 'Updating npm done!' || echo 'Updating npm failed...'"
+
+# Network
+## Restart Wi-Fi
 alias wifirestart="sudo ifconfig en0 down && sudo ifconfig en0 up"
+## View MAC address
 alias macview="ifconfig en0 | grep ether"
+## Set random MAC address and restart Wi-Fi
 alias macrandom="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//' | xargs sudo ifconfig en0 ether && wifirestart"
-# Your MAC Address resets aoutomatically upon restart. You can reset it manually though:
-# alias macreset="sudo ifconfig en0 ether <your-original-mac-address>"
+## Your MAC Address resets aoutomatically upon restart. You can reset it manually though:
+## alias macreset="sudo ifconfig en0 ether <your-original-mac-address>"
+
 
 # Web Development related stuff
-## npm
-alias inpm="npm init"
-alias inpm!="npm init -y"
-alias npmr="npm run"
-alias npmi="npm install"
-alias npmid="npm install -D"
-alias npmig="npm install -g"
-alias npmu="npm update"
 
+## npm
+alias Inpm="npm init"
+alias InpmY="npm init -y"
+alias npmR="npm run"
+alias npmI="npm install"
+alias npmID="npm install -D"
+alias npmIG="npm install -g"
+alias npmU="npm uninstall"
+alias npmUD="npm uninstall -D"
 ### [dylang/npm-check: Check for outdated, incorrect, and unused dependencies.](https://github.com/dylang/npm-check)
-alias npmcu="npm-check -u"
+alias npmC="npm-check -u" 
+alias npmL0="npm ls --depth=0"
 
 ## yarn
 alias yi="yarn init -y"
 
-# youtube-dl related stuff
+# youtube-dl
+## Download individual YouTube video / videos
 alias ydv="youtube-dl --output '%(title)s-%(id)s-%(resolution)s.%(ext)s' --format bestvideo+bestaudio"
+## Download numbered YouTube video playlist
 alias ydvp="youtube-dl --output '%(playlist_index)s-%(title)s-%(id)s-%(resolution)s.%(ext)s' --format bestvideo+bestaudio --ignore-errors"
+## Download & convert individual YouTube video / videos to mp3 file / files
 alias yda="youtube-dl --output '%(title)s-%(id)s-%(abr)dKBpS.%(ext)s' -x --audio-format=mp3 --add-metadata --audio-quality 0 --embed-thumbnail"
+## Download & convert YouTube video to numbered mp3 playlist
 alias ydap="youtube-dl --output '%(autonumber)s - %(title)s-%(id)s-%(abr)dKBpS.%(ext)s' --ignore-errors -x --audio-format=mp3 --add-metadata --audio-quality 0 --embed-thumbnail"
+
+alias git=hub
