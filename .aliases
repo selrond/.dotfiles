@@ -16,25 +16,6 @@ alias macrandom="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//' | xargs sudo
 ## Your MAC Address resets aoutomatically upon restart. You can reset it manually though:
 ## alias macreset="sudo ifconfig en0 ether <your-original-mac-address>"
 
-
-# Web Development related stuff
-
-## npm
-alias Inpm="npm init"
-alias InpmY="npm init -y"
-alias npmR="npm run"
-alias npmI="npm install"
-alias npmID="npm install -D"
-alias npmIG="npm install -g"
-alias npmU="npm uninstall"
-alias npmUD="npm uninstall -D"
-### [dylang/npm-check: Check for outdated, incorrect, and unused dependencies.](https://github.com/dylang/npm-check)
-alias npmC="npm-check -u" 
-alias npmL0="npm ls --depth=0"
-
-## yarn
-alias yi="yarn init -y"
-
 # youtube-dl
 ## Download individual YouTube video / videos
 alias ydv="youtube-dl --output '%(title)s-%(id)s-%(resolution)s.%(ext)s' --format bestvideo+bestaudio"
