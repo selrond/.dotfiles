@@ -1,3 +1,7 @@
+# General
+
+alias cat="ccat"
+
 # Updating
 
 ## Update brew 
