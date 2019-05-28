@@ -7,6 +7,8 @@ alias cat="ccat"
 ## Update brew
 alias brewup="brew update; brew upgrade; brew cleanup; brew doctor"
 
+alias brew-backup="brew bundle dump --force --file=\"~/.dotfiles/Brewfile\""
+
 ## Update global npm packages
 alias npmup="npm update -g"
 
