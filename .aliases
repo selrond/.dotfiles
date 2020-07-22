@@ -1,5 +1,8 @@
 # General
 
+alias l='exa --long --header --all --group-directories-first'
+alias lt='l --tree'
+
 alias cat="ccat"
 
 # Updating
@@ -10,7 +13,7 @@ alias brewup="brew update; brew upgrade; brew cleanup; brew doctor"
 alias brew-backup="brew bundle dump --force --file=\"~/.dotfiles/Brewfile\""
 
 ## Update global npm packages
-alias npmup="npm update -g"
+alias npmup="nvm use system && npm update -g"
 
 alias allup="brewup && echo 'Updating homebrew done!' || echo 'Updating homebrew failed...'; npmup && echo 'Updating npm done!' || echo 'Updating npm failed...'"
 
@@ -28,10 +31,15 @@ alias macrandom="openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//' | xargs sudo
 ## Download individual YouTube video / videos
 alias ydv="youtube-dl --output '%(title)s-%(id)s-%(resolution)s.%(ext)s' --format bestvideo+bestaudio"
 ## Download numbered YouTube video playlist
-alias ydvp="youtube-dl --output '%(playlist_index)s-%(title)s-%(id)s-%(resolution)s.%(ext)s' --format bestvideo+bestaudio --ignore-errors"
+alias ydvp="youtube-dl --output '%(playlist_index)s-%(title)s-%(id)s-%(resolution)s.%(ext)s' --format 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 --ignore-errors"
 ## Download & convert individual YouTube video / videos to mp3 file / files
 alias yda="youtube-dl --output '%(title)s-%(id)s-%(abr)dKBpS.%(ext)s' -x --audio-format=mp3 --add-metadata --audio-quality 0 --embed-thumbnail"
 ## Download & convert YouTube video to numbered mp3 playlist
 alias ydap="youtube-dl --output '%(autonumber)s - %(title)s-%(id)s-%(abr)dKBpS.%(ext)s' --ignore-errors -x --audio-format=mp3 --add-metadata --audio-quality 0 --embed-thumbnail"
 
-alias git=hub
+alias git="hub"
+
+alias g="git"
+
+# Docker
+alias dcrr="docker-compose run --rm"
