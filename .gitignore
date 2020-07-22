@@ -60,3 +60,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Web Dev
+node_modules
