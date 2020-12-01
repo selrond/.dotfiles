@@ -15,7 +15,10 @@ alias brew-backup="brew bundle dump --force --file=\"~/.dotfiles/Brewfile\""
 ## Update global npm packages
 alias npmup="nvm use system && npm update -g"
 
-alias allup="brewup && echo 'Updating homebrew done!' || echo 'Updating homebrew failed...'; npmup && echo 'Updating npm done!' || echo 'Updating npm failed...'"
+## Update zsh plugins
+alias update-zsh-plugins="antibody update"
+
+alias allup="update-zsh-plugins && echo 'Zsh plgins updated' || 'Updating zsh plugins failed...'; brewup && echo 'Updating homebrew done!' || echo 'Updating homebrew failed...'; npmup && echo 'Updating npm done!' || echo 'Updating npm failed...'"
 
 # Network
 ## Restart Wi-Fi
@@ -42,4 +45,9 @@ alias git="hub"
 alias g="git"
 
 # Docker
+alias dc="docker-compose"
 alias dcrr="docker-compose run --rm"
+
+# Development
+alias ci="code-insiders"
+alias c="code"
