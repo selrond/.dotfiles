@@ -80,5 +80,5 @@ source /Users/selrond/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 export PATH="/usr/local/sbin:$PATH"
 
-source ~/.aliases
-source ~/.functions
+source ~/.aliases.sh
+source ~/.functions.zsh
