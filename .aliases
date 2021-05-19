@@ -1,9 +1,16 @@
 # General
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
 
-alias l='exa --long --header --all --group-directories-first'
-alias lt='l --tree'
+alias l='exa --long --header --all --git --icons --group-directories-first'
+alias lt='l --tree --level=2'
 
 alias cat="ccat"
+
+alias d='cd ~/Desktop'
+
+alias reload='. ~/.zshrc'
 
 # Updating
 
