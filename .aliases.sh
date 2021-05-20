@@ -10,7 +10,7 @@ alias cat="ccat"
 
 alias d='cd ~/Desktop'
 
-alias reload='. ~/.zshrc.zsh'
+alias reload='. ~/.zshrc'
 
 # Updating
 
