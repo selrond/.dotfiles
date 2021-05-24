@@ -380,22 +380,26 @@ mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Amphetamine", id: 937984704
 mas "Baby Monitor 3G", id: 626137367
-mas "Bear", id: 1091189122
 mas "Black Out", id: 1319884285
 mas "Clean Text Menu", id: 1222295315
+mas "Craft", id: 1487937127
 mas "Dato", id: 1470584107
 mas "Day One", id: 1055511498
+mas "GarageBand", id: 682658836
 mas "Gifski", id: 1351639930
 mas "Glance", id: 1513574319
-mas "GoPro Player", id: 1460836908
+mas "Hand Mirror", id: 1502839586
 mas "HazeOver", id: 430798174
 mas "Irvue", id: 1039633667
 mas "Jiffy", id: 1502527999
 mas "Keynote", id: 409183694
+mas "Meeter", id: 1510445899
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pocket", id: 568494494
-mas "Reeder", id: 880001334
+mas "Recordia", id: 1529006487
+mas "Reeder", id: 1449412482
+mas "Shareful", id: 1522267256
 mas "Spark", id: 1176895641
 mas "Tadam", id: 531349534
 mas "Todoist", id: 585829637
