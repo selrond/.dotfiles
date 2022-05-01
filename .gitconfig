@@ -11,19 +11,20 @@
 	alias = "!git config --get-regexp alias"
 	start = !git init && git commit -m 'Initial commit' --allow-empty
 	sup = "status --short --branch"
-	graph = "log --all --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
+	graph = "log --all --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''%C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
 	co = "checkout"
-    s = "switch"
+	s = "switch"
 	# abbr of "new branch"
-	nb = "co -b"
+	nb = "s -c"
 	fap = "fetch --all --prune"
 	cph = !echo \"[$(git log -1 --pretty=%B)]($(git rev-parse --short HEAD))\" | pbcopy
 	unstage = "reset --"
-	sweep = !git branch --merged | egrep -v \"(^\\*|master|develop)\" | xargs git branch -d
+	sweep = !git branch --merged | egrep -v \"(^\\*|master|main|develop)\" | xargs git branch -d
 	upload = push -u origin HEAD
 	cm = commit -vm
 	pfl = push --force-with-lease
 	wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
+	get = pull --all --prune
 [color]
 	ui = auto
 [color "diff-highlight"]
@@ -47,6 +48,7 @@
 [merge]
 	tool = vscode
 	directoryRenames = true
+	conflictStyle = zdiff3
 [mergetool "vscode"]
 	cmd = "code --wait $MERGED"
 [rerere]

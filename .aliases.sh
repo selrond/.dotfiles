@@ -1,4 +1,8 @@
 # General
+
+alias python="/opt/homebrew/bin/python3"
+alias pip="/opt/homebrew/bin/pip3"
+
 alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
@@ -20,7 +24,7 @@ alias brewup="brew update; brew upgrade; brew cleanup; brew doctor"
 alias brew-backup="brew bundle dump --force --file=\"~/.dotfiles/Brewfile\""
 
 ## Update global npm packages
-alias npmup="nvm use system && npm update -g"
+alias npmup="fnm use system && npm update -g"
 
 ## Update zsh plugins
 alias update-zsh-plugins="antibody update"
@@ -50,6 +54,7 @@ alias ydap="youtube-dl --output '%(autonumber)s - %(title)s-%(id)s-%(abr)dKBpS.%
 alias git="hub"
 
 alias g="git"
+alias lg="lazygit"
 
 # Docker
 alias dc="docker-compose"

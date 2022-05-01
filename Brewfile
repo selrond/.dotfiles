@@ -14,8 +14,6 @@ tap "martido/graph"
 tap "mas-cli/tap"
 tap "vitorgalvao/tiny-scripts"
 tap "xwmx/taps"
-# MPEG-4 command-line tool
-brew "atomicparsley"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -80,8 +78,6 @@ brew "httpie"
 brew "httpstat"
 # Add GitHub support to git on the command-line
 brew "hub"
-# Configurable static site generator
-brew "hugo"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Prints information and tests integrity of JPEG/JFIF files
@@ -98,8 +94,6 @@ brew "lsof", link: true
 brew "luarocks"
 # Swiss Army Knife for macOS
 brew "m-cli"
-# Drop-in replacement for MySQL
-brew "mariadb"
 # Mac App Store command-line interface
 brew "mas"
 # Unified display of technical and tag data for audio/video
@@ -144,8 +138,6 @@ brew "tokei"
 brew "trash"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Vi 'workalike' with many additional features
-brew "vim"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Watch files and take action when they change
@@ -182,9 +174,6 @@ cask "1password"
 cask "alt-tab"
 # Application uninstaller
 cask "appcleaner"
-# Data backup and storage service
-cask "backblaze"
-cask "background-music"
 # Prevents audio balance from drifting left or right
 cask "balance-lock"
 # Free and open-source 3D creation suite
@@ -199,12 +188,8 @@ cask "calibre"
 cask "cheatsheet"
 # Downloads videos and audio from websites
 cask "clipgrab"
-# Tool to show live information about the batteries in various devices
-cask "coconutbattery"
 # Multi-platform client-side cloud file encryption tool
 cask "cryptomator"
-# Server and cloud storage browser
-cask "cyberduck"
 # Utility to enhance the Open and Save dialogs in applications
 cask "default-folder-x"
 # Voice and text chat software
@@ -215,8 +200,6 @@ cask "docker"
 cask "dropbox"
 # Tool to rename digital photos, movie- and audio-clips
 cask "exifrenamer"
-# Calendar software
-cask "fantastical"
 # File finder
 cask "find-any-file"
 # Web browser
@@ -244,9 +227,6 @@ cask "fontbase"
 cask "fork"
 # Finder replacement and FTP, SFTP, WebDAV and Amazon s3 client
 cask "forklift"
-# Tool to measure the computer system's performance
-cask "geekbench"
-cask "gfxcardstatus"
 # Game client
 cask "gog-galaxy"
 # Web browser
@@ -261,17 +241,12 @@ cask "handbrake"
 cask "iina"
 # Tool to optimize images to a smaller size
 cask "imageoptim"
-cask "intel-power-gadget"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Keyboard customizer
 cask "karabiner-elements"
 # File archiver
 cask "keka"
-# Automation software
-cask "keyboard-maestro"
-# Interface for reading and syncing eBooks
-cask "kindle"
 # Animated screen capture application
 cask "licecap"
 # Host-based application firewall
@@ -284,14 +259,10 @@ cask "macs-fan-control"
 cask "meld"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
-# Resize and reposition apps
-cask "mosaic"
 # VPN client
 cask "mullvadvpn"
 # Music tagger
 cask "musicbrainz-picard"
-# Visual tool to design, develop and administer MySQL servers
-cask "mysqlworkbench"
 # Utility to toggle dark mode
 cask "nightowl"
 # App to write, plan, collaborate, and get organized
@@ -300,16 +271,12 @@ cask "notion"
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
-# Finds large, unwanted files and deletes them
-cask "omnidisksweeper"
 # File system integration
 cask "osxfuse"
 # Collaboration platform for API development
 cask "postman"
 # Graphical user interface for the 'defaults' command
 cask "prefs-editor"
-# Web development companion
-cask "prepros"
 # Peer to peer Bitorrent client
 cask "qbittorrent"
 # QuickLook plug-in that renders source code with syntax highlighting
@@ -322,7 +289,6 @@ cask "qlstephen"
 cask "qlvideo"
 cask "quicklook-csv"
 cask "quicklookase"
-cask "rcdefaultapp"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # JavaScript playground that auto-evaluates as code is typed
@@ -331,14 +297,10 @@ cask "runjs"
 cask "sequel-pro"
 # Instant messaging application focusing on security
 cask "signal"
-# Video chat, voice call and instant messaging application
-cask "skype"
 # Team communication and collaboration software
 cask "slack"
 # Displays all open files and sockets in use by all running processes
 cask "sloth"
-# Move and resize windows with ease
-cask "spectacle"
 # Music streaming service
 cask "spotify"
 # Video game digital distribution service
@@ -357,32 +319,18 @@ cask "tableplus"
 cask "telegram"
 # Utility to change the default backup interval of Time Machine
 cask "timemachineeditor"
-# Web browser focusing on security
-cask "tor-browser"
-cask "tower2"
-# Open-source BitTorrent client
-cask "transmission"
 # Tool to automate the insertion of frequently used text and graphics
 cask "typinator"
 # Configurable document editor that supports Markdown
 cask "typora"
 # Free and open-source hosted hypervisor for x86 virtualization
 cask "virtualbox"
-# Open-source code editor
-cask "visual-studio-code"
-# Code editor
-cask "visual-studio-code-insiders"
 # Multimedia player
 cask "vlc"
-# Network protocol analyzer
-cask "wireshark"
-mas "Affinity Designer", id: 824171161
-mas "Affinity Photo", id: 824183456
 mas "Amphetamine", id: 937984704
 mas "Baby Monitor 3G", id: 626137367
 mas "Black Out", id: 1319884285
 mas "Clean Text Menu", id: 1222295315
-mas "Craft", id: 1487937127
 mas "Dato", id: 1470584107
 mas "Day One", id: 1055511498
 mas "GarageBand", id: 682658836
@@ -399,7 +347,6 @@ mas "Pages", id: 409201541
 mas "Pocket", id: 568494494
 mas "Recordia", id: 1529006487
 mas "Reeder", id: 1449412482
-mas "Shareful", id: 1522267256
 mas "Spark", id: 1176895641
 mas "Tadam", id: 531349534
 mas "Todoist", id: 585829637

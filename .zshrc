@@ -7,7 +7,6 @@ fi
 
 # Tell zsh to use "standard" path delimiters when moving across strigs
 autoload -Uz compinit
-compinit
 autoload -Uz select-word-style
 select-word-style bash
 
@@ -16,36 +15,38 @@ source <(antibody init)
 antibody bundle romkatv/powerlevel10k
 antibody bundle zsh-users/zsh-completions
 antibody bundle zsh-users/zsh-autosuggestions
-antibody bundle zdharma/fast-syntax-highlighting
+antibody bundle zdharma-continuum/fast-syntax-highlighting
 antibody bundle zsh-users/zsh-history-substring-search
-
-export NVM_COMPLETION=true
-export NVM_LAZY_LOAD=true
-# export NVM_NO_USE=true
-export NVM_AUTO_USE=true
-export NVM_LAZY_LOAD_EXTRA_COMMANDS=('code', 'c', 'code-insiders', 'ci', 'subl', 'gittower', 'zoxide')
-antibody bundle lukechilds/zsh-nvm
-
-antibody bundle lukechilds/zsh-better-npm-completion
-antibody bundle buonomo/yarn-completion
 antibody bundle MichaelAquilina/zsh-you-should-use
 antibody bundle docker/cli path:contrib/completion/zsh kind:fpath
 antibody bundle docker/compose path:contrib/completion/zsh kind:fpath
 antibody bundle docker/machine path:contrib/completion/zsh kind:fpath
-compinit
+antibody bundle robbyrussell/oh-my-zsh
 antibody bundle "
   robbyrussell/oh-my-zsh path:plugins/git
   robbyrussell/oh-my-zsh path:plugins/github
   robbyrussell/oh-my-zsh path:plugins/wp-cli
 "
 
+# Homebrew completions
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
+
 HOMEBREW_NO_INSTALL_CLEANUP=true
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+# [Schniz/fnm: 🚀 Fast and simple Node.js version manager, built in Rust](https://github.com/Schniz/fnm "Schniz/fnm: 🚀 Fast and simple Node.js version manager, built in Rust")
+eval "$(fnm env --use-on-cd)"
 
-# zsh-completions https://github.com/zsh-users/zsh-completions
-fpath=(/usr/local/share/zsh-completions $fpath)
+# compinit -i
+
+# # zsh-completions https://github.com/zsh-users/zsh-completions
+# fpath=(/usr/local/share/zsh-completions $fpath)
 
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=100000
@@ -76,9 +77,9 @@ eval "$(zoxide init zsh)"
 
 export BAT_CONFIG_PATH=~/.batrc
 
-source /Users/selrond/Library/Preferences/org.dystroy.broot/launcher/bash/br
-
-export PATH="/usr/local/sbin:$PATH"
+# export PATH="/usr/local/sbin:$PATH"
 
 source ~/.aliases.sh
 source ~/.functions.zsh
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
