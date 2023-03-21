@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # General
 
 alias python="/opt/homebrew/bin/python3"
@@ -10,7 +12,7 @@ alias v="nvim"
 alias l='exa --long --header --all --git --icons --group-directories-first'
 alias lt='l --tree --level=2'
 
-alias cat="ccat"
+alias cat="bat --theme="TwoDark" --map-syntax='js:jsx'"
 
 alias d='cd ~/Desktop'
 
@@ -27,7 +29,7 @@ alias brew-backup="brew bundle dump --force --file=\"~/.dotfiles/Brewfile\""
 alias npmup="fnm use system && npm update -g"
 
 ## Update zsh plugins
-alias update-zsh-plugins="antibody update"
+alias update-zsh-plugins="antidote update"
 
 alias allup="update-zsh-plugins && echo 'Zsh plgins updated' || 'Updating zsh plugins failed...'; brewup && echo 'Updating homebrew done!' || echo 'Updating homebrew failed...'; npmup && echo 'Updating npm done!' || echo 'Updating npm failed...'"
 
@@ -54,6 +56,7 @@ alias ydap="youtube-dl --output '%(autonumber)s - %(title)s-%(id)s-%(abr)dKBpS.%
 alias git="hub"
 
 alias g="git"
+alias gsub="git submodule"
 alias lg="lazygit"
 
 # Docker
