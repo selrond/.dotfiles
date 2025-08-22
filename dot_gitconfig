@@ -1,0 +1,60 @@
+[user]
+  name = Sebastian Andil
+  email = sebastian.andil@gmail.com
+[core]
+  excludesfile = /Users/selrond/.gitignore
+  pager = "diff-so-fancy | less --tabs=2 -+X"
+[rebase]
+  autostash = true
+[alias]
+  g = "git"
+  aliases = "!git config --get-regexp alias"
+  start = !git init && git commit -m 'Initial commit' --allow-empty
+  sup = "status --short --branch"
+  graph = "log --all --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''%C(white)%s%C(reset) %C(dim white)- %an%C(reset)'"
+  co = "checkout"
+  s = "switch"
+  # abbr of "new branch"
+  nb = "s -c"
+  fap = "fetch --all --prune"
+  cph = !echo \"[$(git log -1 --pretty=%B)]($(git rev-parse --short HEAD))\" | pbcopy
+  unstage = "reset --"
+  upload = push -u origin HEAD
+  cm = commit -vm
+  pfl = push --force-with-lease
+  wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
+  get = pull --all --prune
+  sub-get = submodule update --remote --merge
+[color]
+  ui = auto
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+[color "diff"]
+  meta = yellow
+  frag = magenta bold
+  commit = yellow bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
+[pull]
+  rebase = true
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = "code --wait --diff $LOCAL $REMOTE"
+[merge]
+  tool = vscode
+  directoryRenames = true
+  conflictStyle = zdiff3
+[mergetool "vscode"]
+  cmd = "code --wait --merge $REMOTE $LOCAL $BASE $MERGED"
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[init]
+  defaultBranch = main

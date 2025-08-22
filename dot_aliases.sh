@@ -9,7 +9,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
 
-alias l='exa --long --header --all --git --icons --group-directories-first'
+alias l='eza --long --header --all --git --icons --group-directories-first'
 alias lt='l --tree --level=2'
 
 alias cat="bat --theme="TwoDark" --map-syntax='js:jsx'"
@@ -26,7 +26,7 @@ alias brewup="brew update; brew upgrade; brew cleanup; brew doctor"
 alias brew-backup="brew bundle dump --force --file=\"~/.dotfiles/Brewfile\""
 
 ## Update global npm packages
-alias npmup="fnm use system && npm update -g"
+alias npmup="fnm use system && npm update -g && fnm use"
 
 ## Update zsh plugins
 alias update-zsh-plugins="antidote update"
