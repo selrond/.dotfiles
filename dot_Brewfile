@@ -1,0 +1,720 @@
+tap "beeftornado/rmtree"
+tap "github/gh"
+tap "jesseduffield/lazynpm"
+tap "martido/graph"
+tap "oven-sh/bun"
+tap "romkatv/powerlevel10k"
+tap "saulpw/vd"
+tap "th-ch/youtube-music"
+tap "yqrashawn/goku"
+# Run your GitHub Actions locally
+brew "act"
+# Plugin manager for zsh, inspired by antigen and antibody
+brew "antidote"
+# Official Amazon AWS command-line interface
+brew "awscli"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Get/set bluetooth power and discoverable state
+brew "blueutil"
+# Yet another cross-platform graphical process/system monitor
+brew "bottom"
+# Manage your dotfiles across multiple diverse machines, securely
+brew "chezmoi"
+# Cross-platform make
+brew "cmake"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Library for encoding and decoding .avif files
+brew "libavif"
+# General-purpose scripting language
+brew "php"
+# Dependency Manager for PHP
+brew "composer"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Top-like interface for container metrics
+brew "ctop"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
+brew "libheif"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
+# Duplicate file utility
+brew "czkawka"
+# Open source multi-tool for exploring and publishing data
+brew "datasette"
+# Secure runtime for JavaScript and TypeScript
+brew "deno"
+# Good-lookin' diffs with diff-highlight and more
+brew "diff-so-fancy"
+# Tool for exploring each layer in a docker image
+brew "dive"
+# More intuitive version of du in rust
+brew "dust"
+# Run arbitrary commands when files change
+brew "entr"
+# Perl lib for reading and writing EXIF metadata
+brew "exiftool"
+# Modern, maintained replacement for ls
+brew "eza"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Identify or delete duplicate files
+brew "fdupes"
+# Command-line tools for fly.io services
+brew "flyctl"
+# Fast and simple Node.js version manager
+brew "fnm"
+# CLI program that accepts piped input and presents files for selection
+brew "fpp"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# Alternative to top/htop
+brew "glances"
+# GNU version of the tar archiving utility
+brew "gnu-tar"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# Make JSON greppable
+brew "gron"
+# Convert source code to formatted text with syntax highlighting
+brew "highlight"
+# Improved top (interactive process viewer)
+brew "htop"
+# User-friendly cURL replacement (command-line HTTP client)
+brew "httpie"
+# Curl statistics made simple
+brew "httpstat"
+# Add GitHub support to git on the command-line
+brew "hub"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Lazier way to manage everything docker
+brew "lazydocker"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Pager program similar to more
+brew "less"
+# Package manager for the Lua programming language
+brew "luarocks"
+# Swiss Army Knife for macOS
+brew "m-cli"
+# Mac App Store command-line interface
+brew "mas"
+# Modern and intuitive terminal-based text editor
+brew "micro"
+# CLI tool for saving complete web pages as a single HTML file
+brew "monolith"
+# Collection of tools that nobody wrote when UNIX was young
+brew "moreutils"
+# Port scanning utility for large networks
+brew "nmap"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# Command-line and local web note-taking, bookmarking, and archiving
+brew "nb"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Tiny, lightning fast, feature-packed file manager
+brew "nnn"
+# Platform built on V8 to build network applications
+brew "node", link: false
+# Fast, disk space efficient package manager
+brew "pnpm", link: false
+# Object-relational database system
+brew "postgresql@14"
+# Theme for zsh
+brew "powerlevel10k"
+# Modern replacement for ps written in Rust
+brew "procs"
+# Coreutils progress viewer
+brew "progress"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
+# RC file (dotfile) management
+brew "rcm"
+# Perl-powered file rename script with many helpful built-ins
+brew "rename"
+# Wrapper around ripgrep that adds multiple rich file types
+brew "ripgrep-all"
+# Utility that provides fast incremental file transfer
+brew "rsync"
+# Safe, concurrent, practical language
+brew "rust"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Penetration testing for SQL injection and database servers
+brew "sqlmap"
+# Code-search similar to ack
+brew "the_silver_searcher"
+# Terminal multiplexer
+brew "tmux"
+# Program that allows you to count code, quickly
+brew "tokei"
+# Upgrade all the things
+brew "topgrade"
+# CLI tool that moves files or folder to the trash
+brew "trash", link: true
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Watch files and take action when they change
+brew "watchman"
+# Internet file retriever
+brew "wget"
+# Command-line interface for WordPress
+brew "wp-cli"
+# Yet Another Dotfiles Manager
+brew "yadm"
+# JavaScript package manager
+brew "yarn"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# UNIX shell (command interpreter)
+brew "zsh"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
+brew "beeftornado/rmtree/brew-rmtree"
+# A simple terminal UI for git commands, written in Go
+brew "jesseduffield/lazynpm/lazynpm"
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun"
+# Terminal utility for exploring and arranging tabular data
+brew "saulpw/vd/visidata"
+# karabiner configurator
+brew "yqrashawn/goku/goku"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Command-line interface for 1Password
+cask "1password-cli"
+# Renamer for files, music and photos
+cask "a-better-finder-rename"
+# Stand alone ad blocker
+cask "adguard"
+# Collection of apps and services for photography, design, video, web, and UX
+cask "adobe-creative-cloud"
+# GPU-accelerated terminal emulator
+cask "alacritty"
+# Menu bar tool to limit maximum charging percentage
+cask "aldente"
+# Application launcher and productivity software
+cask "alfred"
+# Enable Windows-like alt-tab
+cask "alt-tab"
+# Inspect application bundles
+cask "apparency"
+# Application uninstaller
+cask "appcleaner"
+# Chromium based browser
+cask "arc"
+# Prevents audio balance from drifting left or right
+cask "balance-lock"
+# Tool to flash OS images to SD cards & USB drives
+cask "balenaetcher"
+# Menu bar icon organiser
+cask "bartender"
+# Display management tool
+cask "betterdisplay"
+# Utility improving 3rd party mouse performance and functionalities
+cask "bettermouse"
+# Tool to customise input devices and automate computer systems
+cask "bettertouchtool"
+# Utility to create and modify archives
+cask "betterzip"
+# Compare files and folders
+cask "beyond-compare"
+# Virtual Audio Driver
+cask "blackhole-2ch"
+# 3D creation suite
+cask "blender"
+# Prevents your sleeping computer from connecting to Bluetooth accessories
+cask "bluesnooze"
+# Scriptable scratchpad for developers
+cask "boop"
+# Web browser focusing on privacy
+cask "brave-browser"
+# Open source IDE for exploring and testing APIs
+cask "bruno"
+# E-books management software
+cask "calibre"
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
+# Screen capturing tool
+cask "cleanshot"
+# Downloads videos and audio from websites
+cask "clipgrab"
+# Image, video and clipboard optimiser
+cask "clop"
+# Tool to show live information about the batteries in various devices
+cask "coconutbattery"
+# Plain-text editor for web pages, program source codes and more
+cask "coteditor"
+# Multi-platform client-side cloud file encryption tool
+cask "cryptomator"
+# Server and cloud storage browser
+cask "cyberduck"
+# Disk space visualiser
+cask "daisydisk"
+# Universal database tool and SQL client
+cask "dbeaver-community"
+# Database version management tool
+cask "dbngin"
+# Utility to enhance the Open and Save dialogs in applications
+cask "default-folder-x"
+# Voice and text chat software
+cask "discord"
+# Data recovery software
+cask "disk-drill"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
+# Downloads videos from different websites
+cask "downie"
+# Client for the Dropbox cloud storage service
+cask "dropbox"
+# Tool to rename digital photos, movie- and audio-clips
+cask "exifrenamer"
+# Reimagine your terminal
+cask "fig"
+# Collaborative team software
+cask "figma"
+# File finder
+cask "find-any-file"
+# Web browser
+cask "firefox"
+# Web browser
+cask "firefox@developer-edition"
+# Web browser
+cask "firefox@nightly"
+# Flip clock screensaver
+cask "fliqlo"
+# Screen colour temperature controller
+cask "flux-app"
+cask "font-alegreya"
+cask "font-andika"
+cask "font-atkinson-hyperlegible"
+cask "font-charis"
+cask "font-crimson-text"
+cask "font-fantasque-sans-mono"
+cask "font-fira-code"
+cask "font-ia-writer-quattro"
+cask "font-ibm-plex-mono"
+cask "font-ibm-plex-sans"
+cask "font-inter"
+cask "font-iosevka"
+cask "font-iosevka-aile"
+cask "font-iosevka-etoile"
+cask "font-jetbrains-mono"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-lexend"
+cask "font-literata"
+cask "font-monaspace"
+cask "font-recursive"
+cask "font-sn-pro"
+cask "font-vollkorn"
+# Font manager
+cask "fontbase"
+# GIT client
+cask "fork"
+# Finder replacement and FTP, SFTP, WebDAV and Amazon s3 client
+cask "forklift"
+# Convert RAW images captured with Fujifilm cameras
+cask "fujifilm-x-raw-studio"
+# Game client
+cask "gog-galaxy"
+# Web browser
+cask "google-chrome"
+# Web browser
+cask "google-chrome@dev"
+# Tool to set light or dark appearance on a per-app basis
+cask "gray"
+# Open Source Multimedia Framework
+cask "gstreamer-runtime"
+# Desktop automation application
+cask "hammerspoon"
+# Open-source video transcoder
+cask "handbrake-app"
+# Automated organisation
+cask "hazel"
+# Game launcher
+cask "heroic"
+# Menu bar application that displays the CPU speed limit due to thermal issues
+cask "hot"
+# Free and open-source media player
+cask "iina"
+# Tool to optimise images to a smaller size
+cask "imageoptim"
+# HTTP and GraphQL Client
+cask "insomnia"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+# Menu bar manager
+cask "jordanbaird-ice"
+# Extensible editor for OpenStreetMap
+cask "josm"
+# Keyboard customiser
+cask "karabiner-elements"
+# File archiver
+cask "keka"
+# Automation software
+cask "keyboard-maestro"
+# ZSA keyboard firmware flasher
+cask "keymapp"
+# Audio tagger focusing on efficiency
+cask "kid3"
+# GPU-based terminal emulator
+cask "kitty"
+# Free and open-source media player
+cask "kodi"
+# WordPress local development tool by Flywheel
+cask "local"
+# Mouse utility to add gesture functions and smooth scrolling to 3rd party mice
+cask "mac-mouse-fix"
+# File system integration
+cask "macfuse"
+# Controls and monitors all fans on Apple computers
+cask "macs-fan-control"
+# Video format converter (transcoder)
+cask "makemkv"
+# Extensible two-pane file manager
+cask "marta"
+# Tool to control external monitor brightness & volume
+cask "monitorcontrol"
+# Utility to move and zoom windows—on one display
+cask "moom"
+# Smooths scrolling and set mouse scroll directions independently
+cask "mos"
+# Web browser focused on privacy and on minimizing tracking and fingerprinting
+cask "mullvad-browser"
+# VPN client
+cask "mullvad-vpn"
+# Music tagger
+cask "musicbrainz-picard"
+# Multi-file renaming tool
+cask "name-mangler"
+# Utility to toggle dark mode
+cask "nightowl"
+# App to write, plan, collaborate, and get organised
+cask "notion"
+# Cloud gaming platform
+cask "nvidia-geforce-now"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Finds large, unwanted files and deletes them
+cask "omnidisksweeper"
+# Verify system files structure, run miscellaneous maintenance and more
+cask "onyx"
+# Replacement for Docker Desktop
+cask "orbstack"
+# WebKit based web browser
+cask "orion"
+# Converts and edits video, audio or image files
+cask "permute"
+# Home media player
+cask "plex"
+# Podcast platform
+cask "pocket-casts"
+# Used to access context-specific actions when text is selected
+cask "popclip"
+# Collaboration platform for API development
+cask "postman"
+# Graphical user interface for the 'defaults' command
+cask "prefs-editor"
+# Web development companion
+cask "prepros"
+# HTTP debugging proxy
+cask "proxyman"
+# Peer to peer Bitorrent client
+cask "qbittorrent"
+# Quick Look generator for Markdown files
+cask "qlmarkdown"
+# Thumbnails, static previews, cover art and metadata for video files
+cask "qlvideo"
+# HTTP client that helps testing and describing APIs
+cask "rapidapi"
+# Control your tools with a few keystrokes
+cask "raycast"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
+# Emoji picker optimised for blind people
+cask "rocket"
+# JavaScript playground that auto-evaluates as code is typed
+cask "runjs"
+# Instant messaging application focusing on security
+cask "signal"
+# Team communication and collaboration software
+cask "slack"
+# Displays all open files and sockets in use by all running processes
+cask "sloth"
+# Visualisation, analysis, and annotation of music audio recordings
+cask "sonic-visualiser"
+# File sharing network
+cask "soulseek"
+# Sound and audio controller
+cask "soundsource"
+# Music streaming service
+cask "spotify"
+# Video game digital distribution service
+cask "steam"
+# Customise mouse buttons, wheels and cursor speed
+cask "steermouse"
+# Git client
+cask "sublime-merge"
+# Text editor for code, markup and prose
+cask "sublime-text"
+# Application for inspecting installer packages
+cask "suspicious-package"
+# Replacement for RCDefaultApps, written in Swift
+cask "swiftdefaultappsprefpane"
+# Real time file synchronisation software
+cask "syncthing-app"
+# Quicklook extension for source files
+cask "syntax-highlight"
+# Native GUI tool for relational databases
+cask "tableplus"
+# Messaging app with a focus on speed and security
+cask "telegram"
+# Utility to change the default backup interval of Time Machine
+cask "timemachineeditor"
+# To-do list
+cask "todoist-app"
+# Open-source BitTorrent client
+cask "transmission"
+# AI image upscaler
+cask "upscayl"
+# Virtual machines UI using QEMU
+cask "utm"
+# Disk encryption software focusing on security based on TrueCrypt
+cask "veracrypt"
+# Multimedia player
+cask "vlc"
+# Create, manage, and run virtual machines
+cask "vmware-fusion"
+# Rust-based terminal
+cask "warp"
+# JavaScript IDE
+cask "webstorm"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+cask "wezterm"
+# Native desktop client for WhatsApp
+cask "whatsapp"
+# Compatibility layer to run Windows applications
+cask "wine-stable"
+# YouTube Music Desktop App
+cask "youtube-music"
+# Video communication and virtual meeting platform
+cask "zoom"
+mas "1Password for Safari", id: 1569813296
+mas "AdGuard for Safari", id: 1440147259
+mas "Aiko", id: 1672085276
+mas "Amphetamine", id: 937984704
+mas "Baby Monitor 3G", id: 626137367
+mas "Bear", id: 1091189122
+mas "Blackmagic Disk Speed Test", id: 425264550
+mas "Brightly", id: 1560229265
+mas "Clocker", id: 1056643111
+mas "ColorSlurp", id: 1287239339
+mas "Dato", id: 1470584107
+mas "Day One", id: 1055511498
+mas "Day Progress", id: 6450280202
+mas "Dropover", id: 1355679052
+mas "Esse", id: 1438921989
+mas "Folder Peek", id: 1615988943
+mas "Fresco", id: 1251572132
+mas "GarageBand", id: 682658836
+mas "GoPro Quik", id: 561350520
+mas "HazeOver", id: 430798174
+mas "Hyperduck", id: 6444667067
+mas "iMovie", id: 408981434
+mas "Infuse", id: 1136220934
+mas "Jiffy", id: 1502527999
+mas "Keynote", id: 409183694
+mas "Kindle", id: 302584613
+mas "LanguageTool", id: 1534275760
+mas "MenubarX", id: 1575588022
+mas "Numbers", id: 409203825
+mas "One Thing", id: 1604176982
+mas "Pages", id: 409201541
+mas "Pandan", id: 1569600264
+mas "Recordia", id: 1529006487
+mas "Reeder", id: 1529448980
+mas "Reeder", id: 1449412482
+mas "Shareful", id: 1522267256
+mas "SnippetsLab", id: 1006087419
+mas "SomaFM", id: 449155338
+mas "Spark", id: 1176895641
+mas "Steam Link", id: 1246969117
+mas "Tadam", id: 531349534
+mas "Tailscale", id: 1475387142
+mas "Things", id: 904280696
+mas "UTC Time", id: 1538245904
+mas "Velja", id: 1607635845
+mas "WiFi Signal", id: 525912054
+mas "Yoink", id: 457622435
+vscode "adpyke.codesnap"
+vscode "akamud.vscode-theme-onelight"
+vscode "alefragnani.bookmarks"
+vscode "alex-c.code-canvas-app"
+vscode "ambar.bundle-size"
+vscode "andys8.jest-snippets"
+vscode "anotherglitchinthematrix.monochrome"
+vscode "antfu.file-nesting"
+vscode "antfu.theme-vitesse"
+vscode "arcticicestudio.nord-visual-studio-code"
+vscode "astro-build.astro-vscode"
+vscode "asvetliakov.vscode-neovim"
+vscode "azemoh.one-monokai"
+vscode "ban.spellright"
+vscode "beardedbear.beardedicons"
+vscode "beardedbear.beardedtheme"
+vscode "bierner.docs-view"
+vscode "bierner.github-markdown-preview"
+vscode "bierner.markdown-checkbox"
+vscode "bierner.markdown-emoji"
+vscode "bierner.markdown-footnotes"
+vscode "bierner.markdown-mermaid"
+vscode "bierner.markdown-preview-github-styles"
+vscode "bierner.markdown-yaml-preamble"
+vscode "bradlc.vscode-tailwindcss"
+vscode "britesnow.vscode-toggle-quotes"
+vscode "catppuccin.catppuccin-vsc"
+vscode "chouzz.vscode-better-align"
+vscode "christian-kohler.npm-intellisense"
+vscode "christian-kohler.path-intellisense"
+vscode "clinyong.vscode-css-modules"
+vscode "codezombiech.gitignore"
+vscode "danvk.any-xray"
+vscode "davidanson.vscode-markdownlint"
+vscode "davidlday.languagetool-linter"
+vscode "dbaeumer.vscode-eslint"
+vscode "deerawan.vscode-dash"
+vscode "dkundel.vscode-new-file"
+vscode "docker.docker"
+vscode "drcika.apc-extension"
+vscode "dsznajder.es7-react-js-snippets"
+vscode "eamodio.gitlens"
+vscode "editorconfig.editorconfig"
+vscode "emilast.logfilehighlighter"
+vscode "esbenp.prettier-vscode"
+vscode "eseom.nunjucks-template"
+vscode "fabiospampinato.vscode-open-multiple-files"
+vscode "felipecaputo.git-project-manager"
+vscode "firefox-devtools.vscode-firefox-debug"
+vscode "firsttris.vscode-jest-runner"
+vscode "formulahendry.auto-rename-tag"
+vscode "github.codespaces"
+vscode "github.copilot"
+vscode "github.copilot-chat"
+vscode "github.github-vscode-theme"
+vscode "github.remotehub"
+vscode "github.vscode-github-actions"
+vscode "github.vscode-pull-request-github"
+vscode "graphql.vscode-graphql"
+vscode "graphql.vscode-graphql-syntax"
+vscode "gruntfuggly.todo-tree"
+vscode "hashicorp.terraform"
+vscode "hediet.debug-visualizer"
+vscode "humao.rest-client"
+vscode "huytd.quantumfox"
+vscode "hyzeta.vscode-theme-github-light"
+vscode "imagio.vscode-dimmer-block"
+vscode "ipatalas.vscode-postfix-ts"
+vscode "jakewilson.vscode-placeholder-images"
+vscode "janisdd.vscode-edit-csv"
+vscode "jdinhlife.gruvbox"
+vscode "jock.svg"
+vscode "johnpapa.vscode-peacock"
+vscode "kelvin.vscode-sshfs"
+vscode "kisstkondoros.vscode-gutter-preview"
+vscode "mariusschulz.yarn-lock-syntax"
+vscode "mattpocock.ts-error-translator"
+vscode "mechatroner.rainbow-csv"
+vscode "meganrogge.template-string-converter"
+vscode "mhutchie.git-graph"
+vscode "miguelsolorio.fluent-icons"
+vscode "miguelsolorio.min-theme"
+vscode "mikestead.dotenv"
+vscode "million.million-lint"
+vscode "monokai.theme-monokai-pro-vscode"
+vscode "moshfeu.compare-folders"
+vscode "mrmlnc.vscode-duplicate"
+vscode "mrmlnc.vscode-scss"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode.azure-repos"
+vscode "ms-vscode.copilot-mermaid-diagram"
+vscode "ms-vscode.js-debug-nightly"
+vscode "ms-vscode.remote-explorer"
+vscode "ms-vscode.remote-repositories"
+vscode "ms-vscode.sublime-keybindings"
+vscode "ms-vscode.vscode-commander"
+vscode "ms-vscode.vscode-copilot-data-analysis"
+vscode "ms-vscode.vscode-copilot-vision"
+vscode "ms-vscode.vscode-js-profile-flame"
+vscode "ms-vscode.vscode-typescript-next"
+vscode "ms-vscode.vscode-websearchforcopilot"
+vscode "ms-vsliveshare.vsliveshare"
+vscode "mxsdev.typescript-explorer"
+vscode "mylesmurphy.prettify-ts"
+vscode "naumovs.color-highlight"
+vscode "nicoespeon.abracadabra"
+vscode "nidu.copy-json-path"
+vscode "nmsmith89.incrementor"
+vscode "oouo-diogo-perdigao.docthis"
+vscode "orta.vscode-jest"
+vscode "paulshen.paul-typescript-toolkit"
+vscode "penumbratheme.penumbra"
+vscode "pflannery.vscode-versionlens"
+vscode "pkief.material-product-icons"
+vscode "quick-lint.quick-lint-js"
+vscode "qwtel.sqlite-viewer"
+vscode "redhat.vscode-yaml"
+vscode "richie5um2.vscode-sort-json"
+vscode "ritwickdey.liveserver"
+vscode "ryu1kn.partial-diff"
+vscode "sainnhe.gruvbox-material"
+vscode "sburg.vscode-javascript-booster"
+vscode "semanticdiff.semanticdiff"
+vscode "sleistner.vscode-fileutils"
+vscode "stackbreak.comment-divider"
+vscode "styled-components.vscode-styled-components"
+vscode "stylelint.vscode-stylelint"
+vscode "sumneko.lua"
+vscode "syler.sass-indented"
+vscode "tamasfe.even-better-toml"
+vscode "teabyii.ayu"
+vscode "timonwong.shellcheck"
+vscode "tyriar.sort-lines"
+vscode "unifiedjs.vscode-mdx"
+vscode "vespa-dev-works.jestrunit"
+vscode "virgilsisoe.hammerspoon"
+vscode "vitest.explorer"
+vscode "vscjava.vscode-gradle"
+vscode "wesbos.theme-cobalt2"
+vscode "whizkydee.material-palenight-theme"
+vscode "wix.glean"
+vscode "wmaurer.change-case"
+vscode "wooodhead.vscode-wrap-console-log-simple"
+vscode "xabikos.javascriptsnippets"
+vscode "yinfei.luahelper"
+vscode "yoavbls.pretty-ts-errors"
+vscode "yzhang.markdown-all-in-one"

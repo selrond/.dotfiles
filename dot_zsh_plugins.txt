@@ -1,0 +1,18 @@
+romkatv/powerlevel10k
+
+zsh-users/zsh-completions kind:fpath
+# marlonrichert/zsh-autocomplete
+zsh-users/zsh-history-substring-search
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-history-substring-search
+
+zdharma-continuum/fast-syntax-highlighting kind:defer
+MichaelAquilina/zsh-you-should-use
+
+docker/cli path:contrib/completion/zsh kind:fpath
+docker/machine path:contrib/completion/zsh kind:fpath
+
+robbyrussell/oh-my-zsh path:plugins/git
+robbyrussell/oh-my-zsh path:plugins/github
+robbyrussell/oh-my-zsh path:plugins/docker-compose
+robbyrussell/oh-my-zsh path:plugins/wp-cli
