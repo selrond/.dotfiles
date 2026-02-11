@@ -1,0 +1,57 @@
+# Load Antidote plugin manager installed by Homebrew.
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+
+# Load plugins listed in ${ZDOTDIR:-~}/.zsh_plugins.txt.
+antidote load
+
+# If present, load Powerlevel10k instant prompt cache for faster startup.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  # Source the cached instant-prompt snippet.
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Load Powerlevel10k main prompt config when available.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Activate mise shims/env for this shell session.
+eval "$(mise activate zsh)"
+
+# Enable zoxide smart directory jumping integration.
+eval "$(zoxide init zsh)"
+
+# Keep 50k history entries in memory.
+HISTSIZE=50000
+# Persist up to 50k history entries on disk.
+SAVEHIST=50000
+# Store history in XDG state path.
+HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/zsh/history"
+
+# Append history instead of overwriting file on shell exit.
+setopt APPEND_HISTORY
+# Write each command to history immediately.
+setopt INC_APPEND_HISTORY
+# Keep newest duplicate and drop older duplicates.
+setopt HIST_IGNORE_ALL_DUPS
+# Skip commands that start with a space.
+setopt HIST_IGNORE_SPACE
+# Collapse extra whitespace in saved history commands.
+setopt HIST_REDUCE_BLANKS
+# Use safer file locking for shared history writes.
+setopt HIST_FCNTL_LOCK
+
+# Prevent accidental overwrite with plain ">" redirection.
+setopt NO_CLOBBER
+# Make pipelines fail if any command in the pipeline fails.
+setopt PIPE_FAIL
+# Allow entering a directory name to cd into it.
+setopt AUTO_CD
+
+# Use interactive menu selection for completions.
+zstyle ':completion:*' menu select
+# Make completion matching case-insensitive.
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# Load custom shell functions from XDG config.
+[[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/functions.zsh" ]] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/functions.zsh"
+# Load custom aliases from XDG config.
+[[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliases.zsh" ]] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliases.zsh"

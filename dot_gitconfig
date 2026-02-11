@@ -1,0 +1,129 @@
+[user]
+  name = Sebastian Andil
+  email = sebastian.andil@gmail.com
+[core]
+  # Reuse a single global ignore file for OS/editor noise.
+  excludesfile = ~/.gitignore
+  # Use less as pager with raw color output preserved.
+  pager = less -RF
+
+[fetch]
+  # Remove remote-tracking branches that no longer exist on remotes.
+  prune = true
+  # Prune stale remote-tracking tags as part of fetch.
+  pruneTags = true
+
+[rebase]
+  # Stash local changes automatically before rebasing and reapply after.
+  autostash = true
+  # Auto-reorder/squash fixup! and squash! commits during rebase.
+  autoSquash = true
+  # Update branch refs that point into rebased history.
+  updateRefs = true
+
+[pull]
+  # Keep pull history linear by rebasing instead of merging.
+  rebase = true
+
+[push]
+  # Safe default: push current branch to branch with same name.
+  default = simple
+  # Auto-set upstream on first push of a new branch.
+  autoSetupRemote = true
+
+[init]
+  # Create new repos with main as default branch.
+  defaultBranch = main
+
+[credential]
+  # Store/retrieve HTTPS credentials via macOS Keychain.
+  helper = osxkeychain
+
+[commit]
+  # Show diff in commit editor context.
+  verbose = true
+
+[branch]
+  # Sort branch listings by most recently updated first.
+  sort = -committerdate
+
+[column]
+  # Auto-choose column display in supported commands.
+  ui = auto
+
+[tag]
+  # Sort tags by semantic version descending.
+  sort = -version:refname
+
+[maintenance]
+  # Enable background maintenance tasks.
+  auto = true
+  # Use incremental maintenance strategy.
+  strategy = incremental
+
+[rerere]
+  # Reuse recorded conflict resolutions.
+  enabled = true
+  # Auto-apply reused resolutions to index.
+  autoUpdate = true
+
+[help]
+  # Prompt before auto-correcting mistyped Git commands.
+  autocorrect = prompt
+
+[diff]
+  # Use VS Code as default external difftool.
+  tool = vscode
+
+[difftool "vscode"]
+  # Run VS Code in blocking diff mode.
+  cmd = code --wait --diff "$LOCAL" "$REMOTE"
+
+[merge]
+  # Use VS Code as default merge tool.
+  tool = vscode
+  # Handle directory rename detection in merges.
+  directoryRenames = true
+  # Show both sides plus base in conflict markers.
+  conflictStyle = zdiff3
+
+[mergetool "vscode"]
+  # Run VS Code merge UI in blocking mode.
+  cmd = code --wait --merge "$REMOTE" "$LOCAL" "$BASE" "$MERGED"
+
+[color]
+  # Enable color when output targets a terminal.
+  ui = auto
+
+[alias]
+  # List configured aliases to discover shortcuts quickly.
+  aliases = !git config --get-regexp '^alias\\.'
+  # Compact status view with branch info.
+  sup = status --short --branch
+  # Commit graph view for history exploration.
+  graph = log --graph --oneline --decorate --all
+  # Fast shorthand for checkout.
+  co = checkout
+  # Fast shorthand for switch.
+  s = switch
+  # Create and switch to a new branch.
+  nb = switch -c
+  # Fetch all remotes and prune removed refs.
+  get = fetch --all --prune --prune-tags
+  # Unstage paths while preserving worktree changes.
+  unstage = reset --
+  # Push current HEAD and set upstream on first push.
+  upload = push -u origin HEAD
+  # Commit with verbose diff in editor.
+  cm = commit -vm
+  # Safer force-push that aborts if remote advanced unexpectedly.
+  pfl = push --force-with-lease
+  # List local branches by age with relative times.
+  wip = for-each-ref --sort='authordate:iso8601' --format='%(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
+  # Update submodules to their remote-tracking branches via merge.
+  sub-get = submodule update --remote --merge
+
+[credential "https://github.com"]
+	helper = !/usr/bin/env gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/usr/bin/env gh auth git-credential

@@ -1,0 +1,155 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  cat <<'USAGE'
+Usage: git mop [--dry-run] [--base <branch>] [--protect <name>]...
+
+Delete local branches that:
+- are not protected
+- are not the current branch
+- have no upstream remote
+- are merged into the base branch
+
+Options:
+  -n, --dry-run         Print what would be deleted (no changes)
+  -b, --base <branch>   Base branch to check merged status against
+  -p, --protect <name>  Add a protected branch name (repeatable)
+  -h, --help            Show this help
+
+Defaults:
+- Protected names: main master develop dev staging production prod release trunk
+- Base branch: local branch matching origin/HEAD, else main, else master, else develop
+USAGE
+}
+
+die() {
+  echo "git-mop: $*" >&2
+  exit 1
+}
+
+in_list() {
+  local needle="$1"
+  shift
+  local item
+  for item in "$@"; do
+    [[ "$item" == "$needle" ]] && return 0
+  done
+  return 1
+}
+
+pick_base_branch() {
+  local origin_head base_candidate
+
+  if origin_head="$(git symbolic-ref --quiet --short refs/remotes/origin/HEAD 2>/dev/null)"; then
+    base_candidate="${origin_head#origin/}"
+    if git show-ref --verify --quiet "refs/heads/$base_candidate"; then
+      echo "$base_candidate"
+      return 0
+    fi
+  fi
+
+  if git show-ref --verify --quiet refs/heads/main; then
+    echo main
+    return 0
+  fi
+  if git show-ref --verify --quiet refs/heads/master; then
+    echo master
+    return 0
+  fi
+  if git show-ref --verify --quiet refs/heads/develop; then
+    echo develop
+    return 0
+  fi
+
+  return 1
+}
+
+# Parse args
+DRY_RUN=0
+BASE_BRANCH=""
+EXTRA_PROTECT=()
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -n|--dry-run)
+      DRY_RUN=1
+      shift
+      ;;
+    -b|--base)
+      [[ $# -ge 2 ]] || die "--base requires a branch name"
+      BASE_BRANCH="$2"
+      shift 2
+      ;;
+    -p|--protect)
+      [[ $# -ge 2 ]] || die "--protect requires a branch name"
+      EXTRA_PROTECT+=("$2")
+      shift 2
+      ;;
+    -h|--help)
+      usage
+      exit 0
+      ;;
+    *)
+      die "unknown argument: $1 (try --help)"
+      ;;
+  esac
+done
+
+# Must be in a git work tree
+git rev-parse --is-inside-work-tree >/dev/null 2>&1 || die "not inside a git repository"
+
+CURRENT_BRANCH="$(git branch --show-current)"
+[[ -n "$CURRENT_BRANCH" ]] || die "detached HEAD is not supported"
+
+if [[ -z "$BASE_BRANCH" ]]; then
+  BASE_BRANCH="$(pick_base_branch)" || die "could not determine base branch; pass --base <branch>"
+fi
+
+git show-ref --verify --quiet "refs/heads/$BASE_BRANCH" || die "base branch '$BASE_BRANCH' does not exist locally"
+
+PROTECTED=(
+  main master develop dev staging production prod release trunk
+  "$CURRENT_BRANCH"
+  "$BASE_BRANCH"
+)
+PROTECTED+=("${EXTRA_PROTECT[@]:-}")
+
+DELETED=0
+SKIPPED_UNMERGED=0
+CANDIDATES=0
+
+while IFS= read -r branch; do
+  [[ -n "$branch" ]] || continue
+
+  if in_list "$branch" "${PROTECTED[@]}"; then
+    continue
+  fi
+
+  # Keep branches that still track a remote upstream.
+  if git rev-parse --abbrev-ref "$branch@{upstream}" >/dev/null 2>&1; then
+    continue
+  fi
+
+  CANDIDATES=$((CANDIDATES + 1))
+
+  # Only delete if fully merged into base branch.
+  if git merge-base --is-ancestor "$branch" "$BASE_BRANCH"; then
+    if [[ "$DRY_RUN" -eq 1 ]]; then
+      echo "would delete: $branch"
+    else
+      git branch -d "$branch" >/dev/null
+      echo "deleted: $branch"
+    fi
+    DELETED=$((DELETED + 1))
+  else
+    echo "skip (not merged into $BASE_BRANCH): $branch"
+    SKIPPED_UNMERGED=$((SKIPPED_UNMERGED + 1))
+  fi
+done < <(git for-each-ref refs/heads --format='%(refname:short)')
+
+if [[ "$DRY_RUN" -eq 1 ]]; then
+  echo "dry-run complete: $DELETED branch(es) would be deleted, $SKIPPED_UNMERGED not merged, base=$BASE_BRANCH"
+else
+  echo "complete: deleted $DELETED branch(es), skipped $SKIPPED_UNMERGED not merged, base=$BASE_BRANCH"
+fi
