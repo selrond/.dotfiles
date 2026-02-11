@@ -1,0 +1,31 @@
+window-padding-balance = true
+window-padding-x = 10
+window-padding-y = 10
+window-colorspace = display-p3
+macos-titlebar-style = transparent
+background-opacity = 0.9
+background-blur = 90
+
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+keybind = cmd+,=open_config
+keybind = global:ctrl+\=toggle_quick_terminal
+keybind = alt+backspace=text:\x17
+
+theme = Catppuccin Mocha
+
+font-family = "Maple Mono NF"
+font-size = 14
+font-thicken = true
+font-thicken-strength = 10
+adjust-cell-height = 20%
+
+# Allow macOS to handle Option key for character composition
+# This enables typing special characters like apostrophe on non-US keyboards
+macos-option-as-alt = left
+copy-on-select = clipboard
+
+# Cmd+click to open URLs
+link-url = true
