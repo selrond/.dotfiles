@@ -109,7 +109,6 @@
   # Create and switch to a new branch.
   nb = switch -c
   # Fetch all remotes and prune removed refs.
-  get = fetch --all --prune --prune-tags
   # Unstage paths while preserving worktree changes.
   unstage = reset --
   # Push current HEAD and set upstream on first push.
@@ -122,6 +121,8 @@
   wip = for-each-ref --sort='authordate:iso8601' --format='%(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
   # Update submodules to their remote-tracking branches via merge.
   sub-get = submodule update --remote --merge
+	f = fetch --all --prune --prune-tags
+	get = pull --rebase --autostash
 
 [credential "https://github.com"]
 	helper = !/usr/bin/env gh auth git-credential

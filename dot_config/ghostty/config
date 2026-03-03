@@ -26,6 +26,8 @@ adjust-cell-height = 20%
 # This enables typing special characters like apostrophe on non-US keyboards
 macos-option-as-alt = left
 copy-on-select = clipboard
+confirm-close-surface = false
+macos-non-native-fullscreen = true
 
 # Cmd+click to open URLs
 link-url = true

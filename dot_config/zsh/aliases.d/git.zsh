@@ -1,3 +1,6 @@
+# Base git command shortcut so Git aliases can be used as `g <alias>`.
+alias g='git'
+
 # Git status in short branch-aware format.
 alias gs='git status -sb'
 # Create a git commit.

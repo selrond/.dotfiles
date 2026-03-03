@@ -10,4 +10,6 @@ source "$_zsh_aliases_dir/editor.zsh"
 source "$_zsh_aliases_dir/macos.zsh"
 source "$_zsh_aliases_dir/homebrew.zsh"
 source "$_zsh_aliases_dir/network.zsh"
+source "$_zsh_aliases_dir/claude.zsh"
+source "$_zsh_aliases_dir/codex.zsh"
 unset _zsh_aliases_dir

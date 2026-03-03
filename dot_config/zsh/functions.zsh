@@ -65,3 +65,15 @@ copyfile() {
 pastefile() {
   pbpaste > "$1"
 }
+
+# Docker wrapper with subcommand shortcuts (e.g. `d c up` -> `docker compose up`).
+# Examples: d c up -d, d ps, d images
+d() {
+  if [[ "$1" == "c" ]]; then
+    shift
+    command docker compose "$@"
+    return
+  fi
+
+  command docker "$@"
+}
