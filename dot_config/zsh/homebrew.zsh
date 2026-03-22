@@ -1,3 +1,5 @@
+# Homebrew shortcuts.
+
 # Update, upgrade, and clean Homebrew.
 alias bup='brew update && brew upgrade && brew cleanup'
 # Install a Homebrew formula.

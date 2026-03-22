@@ -1,0 +1,16 @@
+# XDG config files (dotfiles, app configs).
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+# XDG application data (non-essential user data).
+export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
+# XDG state data (history, logs, session state).
+export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
+# XDG cache data (rebuildable files).
+export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
+
+# Keep PATH entries unique in zsh.
+typeset -U path PATH
+# Add user-local executables (e.g., custom git-* commands).
+path=("$HOME/.local/bin" $path)
+
+# Default editor for CLI tools that consult $EDITOR.
+export EDITOR="code --wait --new-window"v

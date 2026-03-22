@@ -1,3 +1,5 @@
+# Listing shortcuts.
+
 if command -v eza >/dev/null 2>&1; then
   # Use eza as the default ls replacement.
   alias ls='eza --group-directories-first --icons=auto'

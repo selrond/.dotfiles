@@ -1,3 +1,5 @@
+# Editor shortcuts.
+
 if command -v nvim >/dev/null 2>&1; then
   # Open Neovim quickly.
   alias v='nvim'

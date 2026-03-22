@@ -1,4 +1,5 @@
 # Claude Code aliases.
+
 # `cc` enables the permission-bypass option, but does not auto-activate it.
 alias cc='claude --allow-dangerously-skip-permissions'
 

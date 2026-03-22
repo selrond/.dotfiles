@@ -1,3 +1,5 @@
+# Git shortcuts.
+
 # Base git command shortcut so Git aliases can be used as `g <alias>`.
 alias g='git'
 
