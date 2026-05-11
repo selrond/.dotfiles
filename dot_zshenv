@@ -13,4 +13,4 @@ typeset -U path PATH
 path=("$HOME/.local/bin" $path)
 
 # Default editor for CLI tools that consult $EDITOR.
-export EDITOR="code --wait --new-window"v
+export EDITOR="code --wait --new-window"
