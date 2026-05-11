@@ -14,7 +14,7 @@ keybind = cmd+,=open_config
 keybind = global:ctrl+\=toggle_quick_terminal
 keybind = alt+backspace=text:\x17
 
-theme = Catppuccin Mocha
+theme = "TokyoNight Night"
 
 font-family = "Maple Mono NF"
 font-size = 14
@@ -24,10 +24,16 @@ adjust-cell-height = 20%
 
 # Allow macOS to handle Option key for character composition
 # This enables typing special characters like apostrophe on non-US keyboards
-macos-option-as-alt = left
+macos-option-as-alt = true
 copy-on-select = clipboard
 confirm-close-surface = false
 macos-non-native-fullscreen = true
 
 # Cmd+click to open URLs
 link-url = true
+
+# Keybindings
+
+# Unset defaults to work with zellij
+keybind = alt+left=unbind
+keybind = alt+right=unbind
