@@ -49,6 +49,7 @@ ensure_bool_default() {
 
   case "$domain" in
     com.apple.dock) dock_needs_restart=1 ;;
+    com.apple.finder) finder_needs_restart=1 ;;
   esac
 }
 
@@ -57,6 +58,9 @@ ensure_bool_default com.apple.dock appswitcher-all-displays true
 
 # Open new Finder windows as separate windows instead of tabs.
 ensure_string_default NSGlobalDomain AppleWindowTabbingMode manual
+
+# Open folders in new windows instead of tabs (e.g. Cmd-click a folder).
+ensure_bool_default com.apple.finder FinderSpawnTab false
 
 if [ "$dock_needs_restart" -eq 1 ]; then
   killall Dock 2>/dev/null || true
