@@ -3,8 +3,8 @@ window-padding-x = 10
 window-padding-y = 10
 window-colorspace = display-p3
 macos-titlebar-style = transparent
-background-opacity = 0.9
-background-blur = 90
+background-opacity = 1
+background-blur = false
 
 cursor-style = block
 cursor-style-blink = false
